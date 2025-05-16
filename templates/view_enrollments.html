@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>Enrollments</title></head>
+<body>
+  <h2>All Enrollments</h2>
+  <a href="/admin-dashboard">Back</a> | <a href="/logout">Logout</a>
+  <table border="1">
+    <tr>
+      <th>Student Name</th>
+      <th>Email</th>
+      <th>Course</th>
+      <th>Enrollment Date</th>
+    </tr>
+    {% for e in enrollments %}
+    <tr>
+      <td>{{ e['student_name'] }}</td>
+      <td>{{ e['email'] }}</td>
+      <td>{{ e['course_name'] }}</td>
+      <td>{{ e['date'] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

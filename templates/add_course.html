@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Add Course</title></head>
+<body>
+  <h2>Add New Course</h2>
+  <form method="POST">
+    <input name="name" placeholder="Course Name" required><br>
+    <textarea name="description" placeholder="Description" required></textarea><br>
+    <input name="duration" placeholder="Duration" required><br>
+    <input name="fee" type="number" placeholder="Fee" required><br>
+    <select name="category">
+      {% for cat in categories %}
+        <option value="{{ cat['id'] }}">{{ cat['name'] }}</option>
+      {% endfor %}
+    </select><br>
+    <button type="submit">Add Course</button>
+  </form>
+  <a href="/admin-dashboard">Back</a>
+</body>
+</html>

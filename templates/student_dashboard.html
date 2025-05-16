@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body>
+  <h2>Welcome, {{ session['student_name'] }}</h2>
+  <a href="/my-courses">My Courses</a> | <a href="/logout">Logout</a>
+  <h3>Available Courses</h3>
+  {% for course in courses %}
+    <div style="border:1px solid #000; margin:10px; padding:10px;">
+      <h4>{{ course['name'] }} ({{ course['category'] }})</h4>
+      <p>{{ course['description'] }}</p>
+      <p>Duration: {{ course['duration'] }} | Fee: ₹{{ course['fee'] }}</p>
+      <a href="/enroll/{{ course['id'] }}">Enroll</a>
+    </div>
+  {% endfor %}
+</body>
+</html>

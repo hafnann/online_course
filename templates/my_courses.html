@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>My Courses</title></head>
+<body>
+  <h2>My Enrolled Courses</h2>
+  <a href="/student-dashboard">Back</a> | <a href="/logout">Logout</a>
+  {% for course in courses %}
+    <div>
+      <h4>{{ course['name'] }}</h4>
+      <p>Duration: {{ course['duration'] }} | Enrolled on: {{ course['date'] }}</p>
+    </div>
+  {% endfor %}
+</body>
+</html>
