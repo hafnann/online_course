@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head><title>My Courses</title></head>
 <body>
@@ -11,4 +11,39 @@
     </div>
   {% endfor %}
 </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Courses</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style7.css') }}">
+</head>
+<body class="dashboard-page">
+
+  <div class="dashboard-container">
+    <header>
+      <h2>My Enrolled Courses</h2>
+      <nav>
+        <a href="/student-dashboard">Back</a>
+        <a href="/logout">Logout</a>
+      </nav>
+    </header>
+
+    <section class="courses-grid">
+      {% for course in courses %}
+        <div class="course-card">
+          <h4>{{ course['name'] }}</h4>
+          <p><strong>Duration:</strong> {{ course['duration'] }}</p>
+          <p><strong>Enrolled on:</strong> {{ course['date'] }}</p>
+        </div>
+      {% endfor %}
+    </section>
+  </div>
+
+</body>
 </html>
+

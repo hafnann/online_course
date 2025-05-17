@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head><title>Dashboard</title></head>
 <body>
@@ -13,5 +13,42 @@
       <a href="/enroll/{{ course['id'] }}">Enroll</a>
     </div>
   {% endfor %}
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style5.css') }}">
+</head>
+<body class="dashboard-page">
+
+  <div class="dashboard-container">
+    <header>
+      <h2>Welcome, {{ session['student_name'] }}</h2>
+      <nav>
+        <a href="/my-courses">My Courses</a>
+        <a href="/logout">Logout</a>
+      </nav>
+    </header>
+
+    <section>
+      <h3>Available Courses</h3>
+      <div class="courses-grid">
+        {% for course in courses %}
+          <div class="course-card">
+            <h4>{{ course['name'] }} <span class="category">({{ course['category'] }})</span></h4>
+            <p>{{ course['description'] }}</p>
+            <p><strong>Duration:</strong> {{ course['duration'] }} | <strong>Fee:</strong> ₹{{ course['fee'] }}</p>
+            <a class="enroll-btn" href="/enroll/{{ course['id'] }}">Enroll</a>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+
 </body>
 </html>

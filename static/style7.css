@@ -1,0 +1,33 @@
+/* Body, header, nav, and dashboard-container already defined previously. my_courses*/
+
+/* Grid layout for course listing */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Course Card Styling */
+.course-card {
+  background: #fefefe;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.course-card h4 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.course-card p {
+  margin: 6px 0;
+  color: #555;
+}

@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html>
-<head><title>Course Enrollment</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Enrollment</title>
+  <!-- Link to the external CSS file in Flask -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 <body>
-  <h1>Welcome to the Online Course Enrollment System</h1>
-  <a href="/register">Register</a> |
-  <a href="/login">Student Login</a> |
-  <a href="/admin-login">Admin Login</a>
+  <div class="container">
+    <h1>Welcome </h1>
+    <div>
+<button class="btn register" onclick="location.href='/register'">Register</button><br><br>
+<button class="btn student-login" onclick="location.href='/login'">Student Login</button><br><br>
+<button class="btn admin-login" onclick="location.href='/admin-login'">Admin Login</button><br><br>
+    </div>
+  </div>
 </body>
 </html>

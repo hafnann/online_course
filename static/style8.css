@@ -1,0 +1,32 @@
+/* Already defined styles for body, header, and container */
+
+/* Admin Dashboard Buttons */
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.action-button {
+  text-decoration: none;
+  background-color: #4a90e2;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.action-button:hover {
+  background-color: #357abd;
+}
+
+.action-button.logout {
+  background-color: #f76c6c;
+}
+
+.action-button.logout:hover {
+  background-color: #d95050;
+}

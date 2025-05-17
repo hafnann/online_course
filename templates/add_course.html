@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head><title>Add Course</title></head>
 <body>
@@ -17,4 +17,41 @@
   </form>
   <a href="/admin-dashboard">Back</a>
 </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Course</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style9.css') }}">
+</head>
+<body class="dashboard-page">
+
+  <div class="dashboard-container">
+    <header>
+      <h2>Add New Course</h2>
+    </header>
+
+    <form method="POST" class="form-container">
+      <input name="name" type="text" placeholder="Course Name" required>
+      <textarea name="description" placeholder="Description" required></textarea>
+      <input name="duration" type="text" placeholder="Duration" required>
+      <input name="fee" type="number" placeholder="Fee" required>
+      <select name="category" required>
+        <option disabled selected>Select Category</option>
+        {% for cat in categories %}
+          <option value="{{ cat['id'] }}">{{ cat['name'] }}</option>
+        {% endfor %}
+      </select>
+      <button type="submit" class="submit-btn">Add Course</button>
+    </form>
+
+    <a class="back-link" href="/admin-dashboard">Back</a>
+  </div>
+
+</body>
 </html>
+

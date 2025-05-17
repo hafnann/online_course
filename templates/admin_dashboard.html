@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head><title>Admin Dashboard</title></head>
 <body>
@@ -7,5 +7,32 @@
   <a href="/add-course">Add Course</a> |
   <a href="/view-enrollments">View Enrollments</a> |
   <a href="/logout">Logout</a>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style8.css') }}">
+</head>
+<body class="dashboard-page">
+
+  <div class="dashboard-container">
+    <header>
+      <h2>Admin Dashboard</h2>
+    </header>
+
+    <div class="admin-actions">
+      <a class="action-button" href="/add-category">Add Category</a>
+      <a class="action-button" href="/add-course">Add Course</a>
+      <a class="action-button" href="/view-enrollments">View Enrollments</a>
+      <a class="action-button logout" href="/logout">Logout</a>
+    </div>
+  </div>
+
 </body>
 </html>

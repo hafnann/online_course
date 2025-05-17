@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html>
-<head><title>Add Category</title></head>
-<body>
-  <h2>Add Course Category</h2>
-  <form method="POST">
-    <input name="name" placeholder="Category Name" required><br>
-    <button type="submit">Add</button>
-  </form>
-  <a href="/admin-dashboard">Back</a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Category</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style10.css') }}">
+</head>
+<body class="dashboard-page">
+
+  <div class="dashboard-container">
+    <header>
+      <h2>Add Course Category</h2>
+    </header>
+
+    <form method="POST" class="form-container">
+      <input name="name" type="text" placeholder="Category Name" required>
+      <button type="submit" class="submit-btn">Add</button>
+    </form>
+
+    <a class="back-link" href="/admin-dashboard">Back</a>
+  </div>
+
 </body>
 </html>
+

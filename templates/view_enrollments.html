@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head><title>Enrollments</title></head>
 <body>
@@ -20,5 +20,53 @@
     </tr>
     {% endfor %}
   </table>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enrollments</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style6.css') }}">
+</head>
+<body class="dashboard-page">
+
+  <div class="dashboard-container">
+    <header>
+      <h2>All Enrollments</h2>
+      <nav>
+        <a href="/admin-dashboard">Back</a>
+        <a href="/logout">Logout</a>
+      </nav>
+    </header>
+
+    <div class="table-wrapper">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Enrollment Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for e in enrollments %}
+          <tr>
+            <td>{{ e['student_name'] }}</td>
+            <td>{{ e['email'] }}</td>
+            <td>{{ e['course_name'] }}</td>
+            <td>{{ e['date'] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
 </body>
 </html>

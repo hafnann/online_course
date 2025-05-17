@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head><title>Admin Login</title></head>
 <body>
@@ -9,5 +9,31 @@
     <button type="submit">Login</button>
   </form>
   <a href="/">Back</a>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style4.css') }}">
+</head>
+<body class="login-page">
+
+  <div class="form-container">
+    <h2>Admin Login</h2>
+    <form method="POST">
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <div class="links">
+      <a href="/">Back</a>
+    </div>
+  </div>
+
 </body>
 </html>

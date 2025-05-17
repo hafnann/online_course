@@ -1,0 +1,91 @@
+/* General Styles studnt dashboard*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+header h2 {
+  color: #333;
+}
+
+nav a {
+  text-decoration: none;
+  margin-left: 15px;
+  color: #4a90e2;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Course Grid */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Course Card */
+.course-card {
+  border: 1px solid #dcdcdc;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fafafa;
+  transition: box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.course-card h4 {
+  margin: 0 0 10px;
+  color: #2c3e50;
+}
+
+.category {
+  font-size: 14px;
+  color: #888;
+}
+
+.course-card p {
+  margin: 8px 0;
+  color: #555;
+}
+
+/* Enroll Button */
+.enroll-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.enroll-btn:hover {
+  background-color: #388e3c;
+}
